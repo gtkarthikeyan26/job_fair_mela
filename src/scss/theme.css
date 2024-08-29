@@ -11400,9 +11400,9 @@ fieldset:disabled .btn {
   .min-vh-md-75 {
     min-height: 75vh !important;
   }
-  .min-vh-md-100 {
+  /* .min-vh-md-100 {
     min-height: 100vh !important;
-  }
+  } */
   .flex-md-fill {
     -webkit-box-flex: 1 !important;
         -ms-flex: 1 1 auto !important;
@@ -16705,8 +16705,8 @@ fieldset:disabled .btn {
     font-size: calc(1.48332rem + 2.79982vw) !important;
   }
   .fs-xxl-8 {
-    font-size: calc(1.55498rem + 3.65978vw) !important;
-  }
+    font-size: calc(1.55498rem + 2.65978vw) !important;
+  } 
   .text-xxl-start {
     text-align: left !important;
   }

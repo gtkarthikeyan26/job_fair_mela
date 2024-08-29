@@ -151,7 +151,63 @@
   }
 }
 
+.job-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #0a2540;
+}
 
+.job-stats {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: #4a4a4a;
+}
+
+.register-btn {
+  background-image: linear-gradient(to right, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-image 0.3s ease;
+}
+
+.register-btn:hover {
+  background-image: linear-gradient(to right, #0056b3, #004085);
+}
+
+@media (min-width: 768px) {
+  .job-title {
+    font-size: 2rem;
+  }
+
+  .job-stats {
+    font-size: 1.1rem;
+  }
+
+  .register-btn {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .job-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .job-title {
+    font-size: 2.5rem;
+  }
+}
   .card-span-img {
     height: 134px;
     width: 134px;
@@ -266,17 +322,18 @@ ul li a:hover {
 
 .leapcamp-showcase .powered-by {
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
 }
 
 .leapcamp-showcase .influencer-logo {
-  width: 150px;
-  margin-right: 15px;
+  width: 250px; /* Increased size */
+  margin-bottom: 15px;
 }
 
 .leapcamp-showcase .powered-by p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #34495e;
   font-weight: 500;
   margin: 0;
@@ -369,28 +426,6 @@ ul li a:hover {
   50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.8; }
 }
 
-/* Add some decorative elements */
-.leapcamp-showcase::before,
-.leapcamp-showcase::after {
-  content: '';
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-  border-radius: 50%;
-  opacity: 0.1;
-}
-
-.leapcamp-showcase::before {
-  top: -100px;
-  left: -100px;
-}
-
-.leapcamp-showcase::after {
-  bottom: -100px;
-  right: -100px;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .leapcamp-showcase .container {
@@ -404,13 +439,11 @@ ul li a:hover {
   }
 
   .leapcamp-showcase .powered-by {
-    justify-content: center;
-    flex-direction: column;
+    align-items: center;
   }
 
   .leapcamp-showcase .influencer-logo {
-    margin-right: 0;
-    margin-bottom: 10px;
+    width: 200px; /* Slightly smaller on mobile */
   }
 
   .leapcamp-showcase .logo-container {
@@ -632,33 +665,24 @@ ul li a:hover {
       });
     </script>
 
-    <section class="py-0" id="home">
-      <div class="bg-holder d-none d-sm-block"
-        style="background-image:url(assets/img/illustrations/hero-bg.png);background-position:right top;background-size:contain;">
+<section class="py-0" id="home">
+  <div class="bg-holder d-none d-sm-block"
+    style="background-image:url(assets/img/illustrations/hero-bg.png);background-position:right top;background-size:contain;">
+  </div>
+  <div class="bg-holder d-sm-none"
+    style="background-image:url(assets/img/illustrations/hero-bg.png);background-position:right top;background-size:contain;">
+  </div>
+  
+  <div class="container">
+    <div class="row align-items-center min-vh-75 min-vh-md-100">
+      <div class="col-md-7 col-lg-6 py-6 text-sm-start text-center">
+        <h1 class="job-title">Find your job better and faster <br class="d-block d-lg-none d-xl-block" /> with <br class="d-block d-lg-none d-xl-block" /> influencer Labs</h1>
+        <p class="job-stats"><strong>Average salary - 2.4 LPA to 5 LPA</strong> <br> 91% Placement rate for our candidates who have registered</p>
+        <button class="register-btn" type="button" onclick="document.getElementById('register').scrollIntoView({behavior: 'smooth'})">CLICK HERE TO REGISTER</button>
       </div>
-      <!--/.bg-holder-->
-
-      <div class="bg-holder d-sm-none"
-        style="background-image:url(assets/img/illustrations/hero-bg.png);background-position:right top;background-size:contain;">
-      </div>
-      <!--/.bg-holder-->
-
-      <div class="container">
-        <div class="row align-items-center min-vh-75 min-vh-md-100">
-          <div class="col-md-7 col-lg-6 py-6 text-sm-start text-center">
-            <h6 class="mt-6 mb-sm-4 display-2 fw-semi-bold lh-sm fs-4 fs-lg-6 fs-xxl-8">Find your job better and faster  <br
-                class="d-block d-lg-none d-xl-block" />with InfluencerLabs</h6>
-            <!-- <p class="mb-4 fs-1">Average salary - 2.4 LPA to 5 LPA</p> -->
-            <p class="mb-4 fs-1"><strong>Average salary - 2.4 LPA to 5 LPA</strong> <br> 91% Placement rate for our
-              candidates who have registered</p>
-            <button class="btn btn-primary rounded-pill bg-gradient" type="button"
-              onclick="document.getElementById('register').scrollIntoView({behavior: 'smooth'})">CLICK HERE TO
-              REGISTER</button>
-            <!-- Search bar removed -->
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
+  </div>
+</section>
     <!-- <section class="py-5">
       <div class="bg-holder"
         style="background-image:url(assets/img/illustrations/bg.png);background-position:left top;background-size:initial;margin-top:-180px;">
@@ -860,15 +884,19 @@ ul li a:hover {
                 <label for="Position" class="form-label">Position Applied</label>
                 <select class="form-select" name="Position" id="Position" required>
                   <option value="select">Please select</option>
-                  <option value="MarketingSpecialist">Marketing Specialist</option>
-                  <option value="SalesManager">Sales Manager</option>
-                  <option value="Developer">Developer</option>
-                  <option value="ProductManager">Product Manager</option>
-                  <option value="DataAnalyst">Data Analyst</option>
-                  <option value="HumanResources">Human Resources Manager</option>
-                  <option value="FinancialAnalyst">Financial Analyst</option>
-                  <option value="GraphicDesigner">Graphic Designer</option>
-                  <option value="ProjectManager">Project Manager</option>
+                  <option value="WebApplicationDeveloper">Web Application Developer</option>
+                  <option value="SoftwareDeveloper">Software Developer</option>
+                  <option value="FrontEndDeveloper">Front End Developer</option>
+                  <option value="SocialMediaMarketing">Social Media Marketing</option>
+                  <option value="DigitalMarketingEngineer">Digital Marketing Engineer</option>
+                  <option value="TeleSalesFieldSales">Tele Sales & Field Sales: IT products & Services</option>
+                  <option value="FieldSalesExecutives">Field Sales Executives</option>
+                  <option value="Accountant">Accountant / Account Assistant / Associate</option>
+                  <option value="CloudDevOpsEngineer">Azure / AWS / GCP and DevOps Engineers</option>
+                  <option value="VoiceProcessExecutives">Voice Process Executives</option>
+                  <option value="ITSupport">Desktop / Network / Application Support - L1 / L2</option>
+                  <option value="HardwareNetworkingEngineer">Hardware & Networking Engineer</option>
+                  <option value="HRRecruiter">HR Recruiter</option>
                   <option value="Others">Others</option>
                 </select>
                 <input type="text" class="form-control mt-2" id="PositionOther" name="PositionOther" placeholder="Please specify" style="display: none;">
@@ -1007,6 +1035,12 @@ ul li a:hover {
           <div class="clientLogo"><img src="assets/img/logos/Amazon 2024 New.png" alt="Logo 31" /></div>
           <div class="clientLogo"><img src="assets/img/logos/Oracle.jpg" alt="Logo 32" /></div>
           <div class="clientLogo"><img src="assets/img/logos/feane.PNG" alt="Logo 33" /></div>
+          <div class="clientLogo"><img src="assets/img/logos/Airbnb.jpg" alt="Logo 34" /></div>
+          <div class="clientLogo"><img src="assets/img/logos/PayPal New 2023.png" alt="Logo 35" /></div>
+          <div class="clientLogo"><img src="assets/img/logos/Razorpay.png" alt="Logo 36" /></div>
+          <div class="clientLogo"><img src="assets/img/logos/Cisco Systems.png" alt="Logo 37" /></div>
+          <div class="clientLogo"><img src="assets/img/logos/vermaclabs.png" alt="Logo 38" /></div>
+          <div class="clientLogo"><img src="assets/img/logos/Oracle.jpg" alt="Logo 39" /></div>
       
           <!-- Duplicate the ENTIRE set of logos -->
           <div class="clientLogo"><img src="assets/img/logos/Alchemy.png" alt="Logo 1" /></div>
@@ -1075,6 +1109,13 @@ ul li a:hover {
           <div class="clientLogo"><img src="assets/img/logos/Amazon 2024 New.png" alt="Logo 31" /></div>
           <div class="clientLogo"><img src="assets/img/logos/Oracle.jpg" alt="Logo 32" /></div>
           <div class="clientLogo"><img src="assets/img/logos/feane.PNG" alt="Logo 33" /></div>
+          <div class="clientLogo"><img src="assets/img/logos/feane.PNG" alt="Logo 33" /></div>
+          <div class="clientLogo"><img src="assets/img/logos/Airbnb.jpg" alt="Logo 34" /></div>
+          <div class="clientLogo"><img src="assets/img/logos/PayPal New 2023.png" alt="Logo 35" /></div>
+          <div class="clientLogo"><img src="assets/img/logos/Razorpay.png" alt="Logo 36" /></div>
+          <div class="clientLogo"><img src="assets/img/logos/Cisco Systems.png" alt="Logo 37" /></div>
+          <div class="clientLogo"><img src="assets/img/logos/vermaclabs.png" alt="Logo 38" /></div>
+          <div class="clientLogo"><img src="assets/img/logos/Oracle.jpg" alt="Logo 39" /></div>
         </div>
       </div>
   
@@ -1733,16 +1774,16 @@ ul li a:hover {
         style="background-image:url(assets/img/illustrations/footer-bg.png);background-position:center;z-index: -1;background-size:cover;">
       </div>
       <!--/.bg-holder-->
-      <div class="gartner-section" style="background-color: #f8f9fa; padding: 40px 20px; font-family: Arial, sans-serif;">
+      <div class="gartner-section" style="background-color: #f8f9fa; font-family: Arial, sans-serif;">
         <section class="leapcamp-showcase">
           <div class="container">
             <div class="content">
-              <div class="powered-by">
+              <!-- <div class="powered-by">
                 <img src="assets/img/influencerlab.png" alt="Influencer Labs Logo" class="influencer-logo">
                 <p>Training and Placement Platform Powered By</p>
-              </div>
+              </div> -->
               <h2 class="title">Unlock Your Potential with LeapCamp</h2>
-              <p class="subtitle">Empowering Careers, Transforming Futures</p>
+              <p class="subtitle"><strong>Training and Placement Platform Powered By <a href="https://influencerlabs.in/" target="_blank" style="text-decoration: none; color: inherit;"><span style="font-size: 1.5rem; color: #004aad;" >Influencer lab</span></a> </strong></p>
               <ul class="features">
                 <li><i class="fas fa-rocket"></i> Cutting-edge Training Programs</li>
                 <li><i class="fas fa-handshake"></i> Industry-leading Placement Services</li>
@@ -1800,7 +1841,7 @@ ul li a:hover {
             </ul>
         </div>
         <div class="footer-col">
-            <h4>open positions</h4>
+            <h4>Follow Us</h4>
             <div class="links">
               <a href="https://www.linkedin.com/company/ilabs2021/" target="_blank">
   <img src="assets/img/linkedin.png" alt="LinkedIn" width="45" height="45">
